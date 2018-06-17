@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:paddingBottom="0dp"
+    android:elevation="0dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:background="@color/notepaper"
+        android:minHeight="@dimen/note_item_min_height_inner">
+
+        <com.lalitesh.datenoteapp.models.views.SquareImageView
+            android:id="@+id/attachmentThumbnail"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/note_thumbnail" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="@dimen/note_item_min_height_inner"
+            android:orientation="vertical"
+            android:paddingBottom="7dp"
+            android:paddingStart="6dp"
+            android:paddingLeft="6dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="7dp">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/note_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:singleLine="true"
+                android:textAppearance="@style/Text.Big"
+                pixlui:typeface="Head.ttf" />
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/note_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:maxLines="@integer/textview_max_lines_expanded"
+                android:textAppearance="@style/Text.Normal"
+                android:visibility="invisible"
+                pixlui:typeface="Body.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:orientation="horizontal"
+                android:alpha="0.6">
+
+                <com.neopixl.pixlui.components.textview.TextView
+                    android:id="@+id/note_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginRight="15dp"
+                    android:gravity="bottom|start"
+                    android:textAppearance="@style/Text.Small"
+                    pixlui:typeface="Normal.ttf" />
+
+                <ImageView
+                    android:id="@+id/archivedIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/ic_archive_black_18dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/lockedIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/category_marker"
+            android:layout_width="15dp"
+            android:layout_height="120dp"
+            android:background="@null"
+            android:minHeight="@dimen/note_item_min_height_inner" />
+
+    </LinearLayout>
+</FrameLayout>

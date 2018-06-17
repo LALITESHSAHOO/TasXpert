@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lalitesh.datenoteapp.fab.FloatingActionsMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="bottom|right"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="@dimen/fab_right_margin"
+    android:layout_marginRight="@dimen/fab_right_margin"
+    android:visibility="invisible"
+    fab:fab_expandDirection="left"
+    fab:fab_addButtonColorNormal="#5c88c5"
+    fab:fab_addButtonColorPressed="#880099CC"
+    fab:fab_addButtonPlusIconColor="#FFFFFF">
+
+   <!-- <com.lalitesh.datenoteapp.fab.FloatingActionButton
+        android:id="@+id/fab_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_colorNormal="#ffe3cb"
+        fab:fab_colorPressed="@color/colorAccentPressed"
+        fab:fab_icon="@drawable/vec_camera"
+        fab:fab_size="normal" /> -->
+
+    <com.lalitesh.datenoteapp.fab.FloatingActionButton
+        android:id="@+id/fab_backup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_colorNormal="#fefaca"
+        fab:fab_colorPressed="@color/action_color_pressed"
+        fab:fab_icon="@drawable/ic_vec_new_backup_fab"
+        fab:fab_size="normal" />
+
+
+    <com.lalitesh.datenoteapp.fab.FloatingActionButton
+        android:id="@+id/fab_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        fab:fab_colorNormal="#e1edd7"
+        fab:fab_colorPressed="@color/action_color_pressed"
+        fab:fab_icon="@drawable/vec_note"
+        fab:fab_size="normal" />
+
+
+   <!-- <com.lalitesh.datenoteapp.fab.FloatingActionButton
+        android:id="@+id/fab_sketch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_colorNormal="#c0dfd0"
+        fab:fab_colorPressed="@color/action_color_pressed"
+        fab:fab_icon="@drawable/ic_vec_sketch_fab"
+        fab:fab_size="normal" /> -->
+
+</com.lalitesh.datenoteapp.fab.FloatingActionsMenu>

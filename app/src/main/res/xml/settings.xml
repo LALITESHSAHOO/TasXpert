@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:fitsSystemWindows="true">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/settings_category_preferences">
+
+        <PreferenceScreen
+                android:divider="@null"
+                android:key="settings_data"
+                android:title="Backup And Encrypt"
+                android:icon="@drawable/ic_vec_new_backup"/>
+
+        <PreferenceScreen
+                android:divider="@null"
+                android:key="settings_interface"
+                android:title="Event Design"
+            android:icon="@drawable/ic_vec_note_design"/>
+
+        <PreferenceScreen
+                android:divider="@null"
+                android:key="settings_navigation"
+                android:title="@string/settings_screen_navigation"
+            android:icon="@drawable/ic_vec_navi"/>
+
+        <PreferenceScreen
+                android:key="settings_behaviors"
+                android:title="@string/settings_screen_behaviors"
+                android:icon="@drawable/ic_vec_behaviour"/>
+
+        <PreferenceScreen
+                android:divider="@null"
+                android:key="settings_notifications"
+                android:title="@string/settings_screen_notifications"
+                android:icon="@drawable/ic_vec_noti"/>
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/help">
+
+        <Preference
+                android:divider="@null"
+                android:key="settings_tour_show_again"
+                android:title="@string/settings_tour_show_again"
+                android:icon="@drawable/ic_vec_tour"
+                android:summary="@string/settings_tour_show_again_summary"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/settings_category_about">
+
+        <Preference
+                android:divider="@null"
+                android:title="@string/settings_statistics"
+                android:icon="@drawable/ic_vec_stat">
+            <intent android:targetPackage="com.lalitesh.datenoteapp"
+                    android:targetClass="com.lalitesh.datenoteapp.StatsActivity"/>
+        </Preference>
+
+        <Preference
+                android:divider="@null"
+                android:title="@string/settings_about"
+            android:icon="@drawable/ic_vec_info">
+            <intent android:targetPackage="com.lalitesh.datenoteapp"
+                    android:targetClass="com.lalitesh.datenoteapp.AboutActivity"/>
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
